@@ -1,0 +1,374 @@
+/* Based on template from csslayoutgenerator.com */
+
+* {
+    max-width: 100%;
+}
+
+body  {
+    background-color: #FFFEFB;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+main {
+
+}
+
+strong {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 100px;
+    line-height: 1em;
+    font-family: "Lato" ;
+}
+
+h2 {
+  font-size: 60px;
+    line-height: 1.5em;
+    font-family: "Lato";
+}
+
+h3 {
+    font-family: "Indie Flower"; 
+    font-size:33px; 
+    line-height: 1em;
+}
+
+p {
+    font: 20px Arial, sans-serif;
+    font-family: "Open Sans";
+    line-height: 1.5em;
+    padding: .7em 0 .7em 0;
+}
+
+.bold-text {
+    font-family: "Lato";
+    font-size: 34px;
+    line-height: 1.3em;
+}
+
+
+/* Fonts 
+-----------------------------------------------------------------------------------------*/
+
+font-family: 'Lato', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Indie Flower', cursive; 
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+
+header {
+  height: auto;
+  background-color: coral;
+  padding: 2%;
+}
+
+nav {
+  text-align: right;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+
+main {}
+
+.audio-scroll {
+    height: 70vh;
+    margin-top: 30vh;
+}
+
+.audio-scroll-items { 
+    display: flex; 
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.audio-scroll-items * {
+    padding: 20px;
+}
+
+#audio-scroll-icons * {
+    padding: 3em;
+}
+
+/* Apply animation to scroll items */
+#audio-scroll-icons {
+    animation-name: zoom;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+/* The animation code */
+@keyframes zoom {
+  0%   {transform: scale(1);}
+25%  {transform: scale(1.05);}
+50%  {transform: scale(1);}
+75%  {transform: scale(1.05);}
+100% {transform: scale(1);}
+}
+
+/* Embedded blooper reel ---------------------------------------------------- */
+
+.blooper-reel {
+    position: relative;
+    height: 400vh; /* the bigger the nubmer, the more scrolling needed */
+}
+
+.overlay-text {
+    color: white;
+}
+
+.overlay-text > * {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 2rem;
+    animation: fadeIn;
+    animation-duration: 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#myVideo {
+    width: 100%; 
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+
+.overlay-color {
+    background-color: rgba(0, 0, 0, .2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    transition-delay: 2s;
+    z-index: -2;
+}
+
+.overlay-color.show {
+    opacity: 1;
+}
+
+
+
+/* Article Text -----------------------------------------------------------------------*/
+
+.text {
+    padding: 0 20% 0 20%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+
+.text div {
+    display: flex;
+    flex-direction: row;
+}
+
+.text img {
+   max-width: 100%;
+}
+
+/* Picture -----------------------------------------------------------------------*/
+.parallax {
+    padding: 2em 0 2em 0;
+}
+
+    
+/*  Triangle Elements  --------------------------------*/
+
+.text {
+    position: relative;
+}
+
+#orange-triangle {
+    position: absolute;
+    z-index: -1;
+    right: -50px;
+    top: 40px;
+    width: 300px;
+}
+
+#purple-triangle {
+    position: absolute;
+    z-index: -1;
+    left: -100px;
+    top: 300px;
+    width: 300px;
+}
+
+#blue-triangle {
+    position: absolute;
+    z-index: -1;
+    right: 20px;
+    top: 400px;
+    width: 150px;
+}
+
+#green-triangle {
+    position: absolute;
+    z-index: -1;
+    left: 30px;
+    top: 0;
+    width: 600px;
+}
+
+#red-triangle {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 500px;
+    width: ;
+}
+
+#yellow-triangle {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    width: 1000px;
+}
+
+#grey-triangle {
+    position: absolute;
+    z-index: -1;
+    right: 30px;
+    bottom: 0;
+    width: 300px;
+}
+
+
+/*  Youtube Video  --------------------------------*/
+
+.youtube-player {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+padding: 2em 0 2em 0;
+}
+
+iframe {
+  /* optional */
+  width: 100%;
+  height: 100%; 
+}
+
+/* Call to Action */ 
+
+.button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 30px 30px 30px 30px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 24px;
+    margin: 40px 2px;
+    cursor: pointer;
+    font-family: "Lato" ;
+}
+
+.call-to-action {
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+}
+
+/*Quote + Logo Container */ 
+
+#logo {
+    height: 500px;
+}
+
+#final-quote { 
+font-family: "Indie Flower"; 
+    font-size: 45px;
+    text-align: left;
+    max-width: 60%;
+    align-self: center;
+    padding: 0 1em 0 0;
+}
+
+
+.final-container {
+    margin: 0 3em;
+}
+
+/* Footer
+-----------------------------------------------------------------------------*/
+
+footer {
+
+}
+
+/* Mobile Solution */ 
+
+#mobile {
+    display: none;
+}
+
+
+/* Media Query Mobile Solution */  
+
+
+@media only screen and (max-width: 1100px) {
+    
+    .content {
+        display: none;
+    }
+    
+    #mobile {
+        display: flow-root;
+        height: 100vh;
+    }
+    
+    audio {
+        display: none;
+    }
+    
+    #green-triangle {
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    top: 0;
+    width: 600px;
+}
+    
+    #yellow-triangle {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    width: 1000px;
+}
+    #mobile-text {
+    font-size:26px; 
+    line-height: 1em;
+    text-align: center;
+    margin:35vh 2em;
+    line-height: 35px;
+    }   
+}
